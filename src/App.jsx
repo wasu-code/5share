@@ -205,14 +205,7 @@ const App = () => {
                   `Connecting to: ${scannedId.slice(0, 8)}...`
                 );
 
-                // If we already have a peer, connect directly
-                if (peer) {
-                  connectToPeer(peer, scannedId);
-                  setQrMode("generate");
-                } else {
-                  // Otherwise navigate to the URL
-                  window.location.href = url;
-                }
+                window.location.href = url;
               }
             } catch (err) {
               console.error("Error parsing QR code:", err);
