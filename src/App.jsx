@@ -268,10 +268,13 @@ const App = () => {
                 </button>
               </div>
 
-              <div className="border-2 border-gray-300 rounded-lg p-4 h-64 flex items-center justify-center bg-white overflow-hidden">
+              <div className="border-2 border-gray-300 rounded-lg p-4 h-72 flex items-center justify-center bg-white overflow-hidden">
                 {qrMode === "generate" && peerId ? (
                   <div className="flex flex-col items-center">
-                    <QRCodeSVG value={getConnectionUrl()} size={200} />
+                    <div className="scheme-dark bg-white p-2">
+                      <QRCodeSVG value={getConnectionUrl()} size={200} />
+                    </div>
+
                     <p className="text-xs mt-2 text-gray-600 break-all max-w-full px-2">
                       {peerId}
                     </p>
